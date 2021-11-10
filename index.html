@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+     <!-- Materialize Icons CDN -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="wrapper">
+            <div class="card">
+                <h1>Password generator</h1>
+
+                <div class="input-copy-icon">
+                    <input type="text" id="password" class="password" placeholder="Need a password?" readonly> <!-- Aqui se generara la contrasena-->
+                    <a onclick="myFunction()" class="copy-icon"><i class="material-icons">content_copy</i></a> <!-- Este boton llamara la funcion que copia la contrasena al portapapeles -->
+                </div>
+
+                <div class="length-generate-btn">
+                    <div class="length-label-input">
+                        <label for="length">Length: </label>
+                        <input type="number" name="length" id="length" class="length" value="8" min="8" max="40">
+                    </div>
+                    <div id="button" class="button" onclick="generatePassword()">Generate! <i class="material-icons">refresh</i></div> <!-- Este boton llamara la funcion Javascript que genera la contrasena en el input #password-->
+    
+                </div>
+            </div>
+
+            <div class="message d-none" id="message">
+                <i class="material-icons">check</i><p>Password copied to cipboard!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
