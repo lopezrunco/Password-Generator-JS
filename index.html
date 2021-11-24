@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>Password Generator</title>
      <!-- Materialize Icons CDN -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,8 +18,8 @@
                 <h1>Password generator</h1>
 
                 <div class="input-copy-icon">
-                    <input type="text" id="password" class="password" placeholder="Need a password?" readonly> <!-- Aqui se generara la contrasena-->
-                    <a onclick="myFunction()" class="copy-icon"><i class="material-icons">content_copy</i></a> <!-- Este boton llamara la funcion que copia la contrasena al portapapeles -->
+                    <input type="text" id="password" class="password" placeholder="Need a password?" readonly>
+                    <a onclick="copyToClipBoard()" class="copy-icon"><i class="material-icons">content_copy</i></a>
                 </div>
 
                 <div class="length-generate-btn">
@@ -26,7 +27,7 @@
                         <label for="length">Length: </label>
                         <input type="number" name="length" id="length" class="length" value="8" min="8" max="40">
                     </div>
-                    <div id="button" class="button" onclick="generatePassword()">Generate! <i class="material-icons">refresh</i></div> <!-- Este boton llamara la funcion Javascript que genera la contrasena en el input #password-->
+                    <div id="button" class="button" onclick="generatePassword()">Generate! <i class="material-icons">refresh</i></div>
     
                 </div>
             </div>
